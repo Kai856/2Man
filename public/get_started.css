@@ -1,0 +1,140 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #0f0a22;
+    color: white;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #0f0a22;
+}
+
+.navbar a {
+    color: #a080ff;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 18px;
+}
+
+.navbar a:hover {
+    color: #ffffff;
+}
+
+/* Hero Section */
+.hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 50px;
+    background-color: #120d31;
+}
+
+.hero-content {
+    max-width: 50%;
+}
+
+.hero-content h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.hero-content p {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #b0a6ff;
+}
+
+/* Form Styling */
+form {
+    margin-top: 20px;
+}
+
+input {
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    background-color: #fff;
+    color: #000;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #a080ff;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #7a60cc;
+}
+
+/* About Us */
+.about-us {
+    padding: 50px 20px;
+    background-color: #1e1a4e;
+    text-align: center;
+}
+
+.about-us h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.about-us p {
+    font-size: 18px;
+    color: #b0a6ff;
+}
+
+/* Log In */
+.login-section {
+    padding: 100px;
+    text-align: center;
+    background-color: #120d31;
+}
+
+.login-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.login-section form {
+    display: inline-block;
+    text-align: left;
+    width: 300px;
+}
+
+.login-section input {
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+}
+
+.login-section button {
+    padding: 10px 20px;
+    background-color: #a080ff;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 10px;
+}

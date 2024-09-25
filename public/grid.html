@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Enrollment Overview</title>
+    <link rel="stylesheet" href="grid.css">
+    <style>
+        /* Add your CSS styles here as shown previously */
+    </style>
+</head>
+<body>
+
+<!-- Add the Progress Bar Section Below the Hero Content -->
+<div class="progress-section">
+    <h3>Progress toward Graduation</h3>
+    <div class="progress-container">
+        <div class="progress-bar" id="progress-bar"></div>
+    </div>
+    <p><span id="completed-credits">0</span>/120 Credits Completed</p>
+</div>
+
+<div class="table-container">
+    <h2>Fall Semester 2024 - First Year</h2>
+
+    <table class="course-table">
+        <thead>
+            <tr>
+                <th>Course Title</th>
+                <th>Enrollment Status</th>
+                <th>Grading Option</th>
+                <th>Credit Hours</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input type="text" placeholder="Enter course title"></td>
+                <td>
+                    <select>
+                        <option>Enrolled</option>
+                        <option>Waitlisted</option>
+                        <option>Completed</option>
+                    </select>
+                </td>
+                <td>
+                    <select>
+                        <option>Graded</option>
+                        <option>Pass/Fail</option>
+                        <option>Audit</option>
+                    </select>
+                </td>
+                <td><input type="number" placeholder="Credit hours" min="0" class="credit-input"></td>
+            </tr>
+            <!-- Add more rows dynamically -->
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">Total Credits:</td>
+                <td><input type="number" id="total-credits" placeholder="0" readonly></td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <button id="add-row-button" class="add-row-button">Add Course</button>
+</div>
+
+<script>
+    const totalCreditsRequired = 120; // Total required credits
+    let completedCredits = 0; // Initialize the total credits completed
+
+    // Function to update the progress bar and the total credits completed
+    function updateProgressBar() {
+        const progressBar = document.getElementById('progress-bar');
+        const completedCreditsDisplay = document.getElementById('completed-credits');
+        const totalCreditsInput = document.getElementById('total-credits');
+        
+        // Calculate percentage of credits completed
+        const progressPercent = (completedCredits / totalCreditsRequired) * 100;
+        
+        // Update progress bar width based on the percentage of credits completed
+        progressBar.style.width = progressPercent + "%";
+        
+        // Update the text display showing the credits completed
+        completedCreditsDisplay.innerText = completedCredits;
+        totalCreditsInput.value = completedCredits; // Update the total credits input
+    }
+
+    // Function to calculate total credits entered in the grid
+    function calculateTotalCredits() {
+        let totalCredits = 0;
+
+        // Select all the input fields where credit hours are entered
+        document.querySelectorAll('tbody input[type="number"]').forEach(input => {
+            totalCredits += parseInt(input.value) || 0; // Add credits entered
+        });
+
+        // Update the completedCredits variable and progress bar
+        completedCredits = totalCredits;
+        updateProgressBar();
+    }
+
+    // Event listener for changes in the table's credit hour input fields
+    const tableBody = document.querySelector('tbody');
+    tableBody.addEventListener('input', (event) => {
+        if (event.target.type === 'number') {
+            calculateTotalCredits(); // Recalculate the total credits when input changes
+        }
+    });
+
+    // Adding new rows functionality
+    const addRowButton = document.getElementById('add-row-button');
+    addRowButton.addEventListener('click', () => {
+        const newRow = document.createElement('tr');
+        newRow.innerHTML = `
+            <td><input type="text" placeholder="Enter course title"></td>
+            <td>
+                <select>
+                    <option>Enrolled</option>
+                    <option>Waitlisted</option>
+                    <option>Completed</option>
+                </select>
+            </td>
+            <td>
+                <select>
+                    <option>Graded</option>
+                    <option>Pass/Fail</option>
+                    <option>Audit</option>
+                </select>
+            </td>
+            <td><input type="number" placeholder="Credit hours" min="0" class="credit-input"></td>
+        `;
+        tableBody.appendChild(newRow);
+    });
+
+</script>
+
+</body>
+</html>

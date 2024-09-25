@@ -1,0 +1,124 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000; /* Dark background for a professional feel */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Progress Bar Section */
+.progress-section {
+    margin: 40px auto;
+    text-align: center;
+    color: #93c5fd; /* Light blue text */
+}
+
+.progress-container {
+    width: 80%;
+    background-color: #e0f2fe; /* Light background for the progress bar */
+    border-radius: 25px;
+    margin: 20px auto;
+    height: 30px;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0%;
+    background-color: #60a5fa; /* Blue progress bar */
+    border-radius: 25px;
+    transition: width 0.5s ease-in-out; /* Smooth animation for progress */
+}
+
+
+.table-container {
+    width: 80%;
+    margin: 0 auto;
+    background-color: #1a1a1a; /* Dark background for table */
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Softer shadow for depth */
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.course-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    color: #fff;
+}
+
+.course-table th, .course-table td {
+    padding: 14px 18px;
+    border: 1px solid #2b2b2b;
+}
+
+.course-table thead th {
+    background-color: #262626; /* Darker shade for table header */
+    font-weight: bold;
+    border-bottom: 2px solid #3a3a3a;
+}
+
+.course-table tbody tr:nth-child(even) {
+    background-color: #1e1e1e; /* Slight row shading */
+}
+
+.course-table tbody tr:hover {
+    border-color: #007bff; /* Hover effect with border instead of color change */
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5); /* Subtle blue shadow on hover */
+}
+
+.course-table tfoot td {
+    font-weight: bold;
+    background-color: #333;
+    border-top: 2px solid #3a3a3a;
+}
+
+.course-table tfoot td:first-child {
+    text-align: right;
+}
+
+/* Input and Select Styling */
+input[type="text"], input[type="number"], select {
+    width: 100%;
+    padding: 10px;
+    background-color: #1a1a1a; /* Dark input background */
+    color: #fff;
+    border: 1px solid #3a3a3a; /* Subtle border */
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+input[type="text"]:focus, input[type="number"]:focus, select:focus {
+    outline: none;
+    border-color: #007bff; /* Blue border on focus */
+    box-shadow: 0 0 6px rgba(0, 123, 255, 0.5); /* Soft blue glow */
+}
+
+/* Button Styling */
+.add-row-button {
+    margin-top: 20px;
+    padding: 12px 30px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.5); /* Blue shadow for depth */
+}
+
+.add-row-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+}
+
+.add-row-button:active {
+    transform: translateY(1px);
+}

@@ -1,0 +1,126 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #0f0a22;
+    color: white;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #0f0a22;
+}
+
+.navbar a {
+    color: #a080ff;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 18px;
+}
+
+.navbar a:hover {
+    color: #ffffff;
+}
+
+/* About Us Section */
+.about-us {
+    padding: 50px 20px;
+    background-color: #1e1a4e;
+    text-align: center;
+}
+
+.about-us h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.about-us p {
+    font-size: 18px;
+    color: #b0a6ff;
+    margin-bottom: 20px;
+}
+
+/* General Button Styling */
+button, .btn {
+    padding: 10px 20px;
+    background-color: #a080ff;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover, .btn:hover {
+    background-color: #7a60cc;
+}
+
+/* Additional Page-Specific Styles */
+.hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 50px;
+    background-color: #120d31;
+}
+
+.hero-content h2 {
+    font-size: 48px;
+    color: white;
+}
+
+.hero-content p {
+    font-size: 24px;
+    color: #b0a6ff;
+}
+
+.login-section {
+    padding: 100px;
+    text-align: center;
+    background-color: #120d31;
+}
+
+.login-section h2 {
+    font-size: 36px;
+    color: #ffffff;
+}
+
+.login-section form {
+    display: inline-block;
+    width: 300px;
+}
+
+input {
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+}
+
+input[type="submit"], .btn {
+    padding: 10px 20px;
+    background-color: #a080ff;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    display: inline-block;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover, .btn:hover {
+    background-color: #7a60cc;
+}

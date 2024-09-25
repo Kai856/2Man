@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DegreeMap - Get Started</title>
+    <link rel="stylesheet" href="get_started.css">
+    <script defer src="/public/script.js"></script>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">
+            <h1>DegreeMap</h1>
+        </div>
+        <div class="menu">
+            <a href="about.html">About Us</a>
+            <a href="login.html" class="btn">Log In</a>
+        </div>
+    </div>
+
+    <!-- Hero Section (Get Started) -->
+    <div class="hero-section" id="get-started">
+        <div class="hero-content">
+            <h2>Get Started</h2>
+            <form id="sign-up-form">
+                <div class="form-step active">
+                    <label for="school">What is your school?</label>
+                    <input type="text" id="school" name="school" required>
+                    <button type="button" class="btn next">Next</button>
+                </div>
+                <div class="form-step">
+                    <label for="school-within-school">What is your school within your university?</label>
+                    <input type="text" id="school-within-school" name="school-within-school" required>
+                    <button type="button" class="btn next">Next</button>
+                </div>
+                <div class="form-step">
+                    <label for="major">What is your major?</label>
+                    <input type="text" id="major" name="major" required>
+                    <button type="button" class="btn next">Next</button>
+                </div>
+                <div class="form-step">
+                    <label for="first-name">First Name</label>
+                    <input type="text" id="first-name" name="first-name" required>
+                    <button type="button" class="btn next">Next</button>
+                </div>
+                <div class="form-step">
+                    <label for="last-name">Last Name</label>
+                    <input type="text" id="last-name" name="last-name" required>
+                    <button type="button" class="btn next">Next</button>
+                </div>
+                <div class="form-step">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                    <button type="submit" class="btn">Sign Up</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
